@@ -2,6 +2,10 @@
 // based on: http://swingleydev.org/blog/tag/arduino/ (no longer available)
 // Interface design, EEZ LVGL tutorial & inspiration from Uteh Str - https://www.youtube.com/watch?v=4k013Crfce8
 // Help with setup and settings by Rui Santos & Sara Santos-Random Nerd Tutorials
+// V3 
+// MX Temp and difference alarm
+// 4 portal sensor display
+// Adjustable brightness. 
 
 // Included Libraries
 #include <OneWire.h>
@@ -279,17 +283,23 @@ void loop() {
     int maxrear = max(thermThreeC, thermFourC);
     int maxall = max(maxfront, maxrear);
     
-    Serial.print(difffront);
+   /* Serial.print(difffront);
     Serial.print("front,");
     Serial.print(diffrear);
     Serial.print("rear,");
-   
-    // Temperature alarm
-    if (maxall > maxtemp) {
-        Serial.println("max temp high");
+   */
+
+  // Temperature alarm - triggers if temp too high OR difference too large
+    if (maxall > maxtemp || diff > maxdiff) {
+        if (maxall > maxtemp) {
+            //Serial.println("ALARM: max temp high");
+        }
+        if (diff > maxdiff) {
+            //Serial.println("ALARM: temp difference too large");
+        }
         digitalWrite(alarm, HIGH);
     } else {
-        Serial.println("max temp off");
+        //Serial.println("alarm off");
         digitalWrite(alarm, LOW);
     }
     
@@ -316,5 +326,5 @@ void loop() {
     lv_arc_set_value(objects.rr_portal_guage, thermFourC);
     lv_label_set_text(objects.rr_portal_label, buf);
 
-    delay(1000); // Refresh rate
+    delay(2000); // Refresh rate
 }
