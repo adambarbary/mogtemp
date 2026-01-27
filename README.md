@@ -32,9 +32,15 @@ Change to Speaker connector for alarm
 If you update the dash, and you start to receive compile errors, change the following.
 In eez-flow.cpp, change:
 lv_obj_get_style_opa((lv_obj_t *)a->user_data, 0); }
+
 To:
+
 lv_obj_get_style_opa((lv_obj_t *)a->user_data, LV_PART_MAIN); }
+
 AND
+
 int32_t opa = (int32_t)lv_obj_get_style_opa(obj, 0);
+
 To:
+
 int32_t opa = (int32_t)lv_obj_get_style_opa(obj, LV_PART_MAIN);
