@@ -214,7 +214,7 @@
 // For ESP32 Dev board (only tested with ILI9341 display)
 // The hardware SPI can be mapped to any pins
 
-#define TFT_MISO 12
+// #define TFT_MISO 12 - This must be left commented out if you want the SD card to work. It's some kind of magic. 
 #define TFT_MOSI 13
 #define TFT_SCLK 14
 #define TFT_CS   15  // Chip select control pin
