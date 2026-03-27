@@ -5,7 +5,13 @@ Code is designed to work on ESP32 CYD (cheap yellow display) using EEZ Studio an
 *Note - complete code can be compiled from Mog_Portal_X, MogDashVX contains interface designs, for those who wish to modify the look and feel. 
 If compiling a new dash, and you get a compile error, please update the following two lines of code noted at the end of this readme. If compiling the FLOW versions, make sure you match the EEZ and Arduino folders.
 
-UPDATE - Mog_portal_flow_V2 is the latest version of the code. This includes saving to SD. 
+UPDATE - Mog_Portal_Flow_final_optimised is the latest version of the code.
+What you get
+Display including monitoring of all four portals
+Screen Header "Unimog Portal Temp" which changes to red "WARNING" when alarm is triggered
+Brightness Control
+Settings screen which allows toggling of Alarm, Setting of maximum temp, setting maximum difference between portals, save to NVRAM
+Alarm output to speaker
 
 Thanks to these projects for inspiration and examples
 EEZ Studio - https://www.envox.eu/studio/studio-introduction/
@@ -20,16 +26,17 @@ Return icon created by Kiranshastry - Flaticon https://www.flaticon.com/free-ico
 Hardware - Not exhaustive, just what I have used so far
 ESP32 - CYD ESP32-2432S028 - Note, this board didn't carry the (R) designation
 Onewire temp sensors - Connected via Pin 27
-Alarm?warning LED - Connected via Pin 22
+Piezo type speaker
 
 Flow update includes dynamic diff and max temp settings, as well as alarm switch. 
 Temps are read and updated every 4 seconds (can be altered by changing TEMP_READ_INTERVAL)
+Save/Load to SD card - Complete - Removed for final, see notes.
+Warning LED behaviour to change to onscreen warning (colour change, or pop-up, or something) - Complete 
+Mute for alarm - use alarm toggle
+Change to Speaker connector for alarm - complete
 
-// To come(well, the plan is...)
-Save/Load to SD card - Complete
-Warning LED behaviour to change to onscreen warning (colour change, or pop-up, or something)
-Mute for alarm
-Change to Speaker connector for alarm
+NOTE: One wire temperature probes need to be identified. Use the OneWire_identifier to obtain these. Add your identifiers in place of my own in the code. 
+Look for the Temperature Sensors section, and the thermOne ... thermFour
 
 
 If you update the dash, and you start to receive compile errors, change the following.
