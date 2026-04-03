@@ -2,9 +2,9 @@
 Multipoint temperature sensor and display designed for Unimog portal monitoring
 Code is designed to work on ESP32 CYD (cheap yellow display) using EEZ Studio and Arduino IDE
 
-**Note** - complete code can be compiled from Mog_Portal_X
+**Note** - complete code can be compiled from Mog_Portal_X - There is a flow and simplified (less featured) non-flow version
 
-MogDashVX contains interface designs, for those who wish to modify the look and feel. 
+MogDash contains interface designs, for those who wish to modify the look and feel. 
 
 If compiling a new dash, and you get a compile error, please update the following two lines of code noted at the end of this readme. If compiling the FLOW versions, make sure you match the EEZ and Arduino folders.
 
