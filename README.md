@@ -15,14 +15,23 @@ Temps are read and updated every 4 seconds (can be altered by changing TEMP_READ
 On alarm trigger, on screen warning (colour change) and audible alarm. Resets on cool down. 
 
 Thanks to these projects for inspiration and examples
+
 EEZ Studio - [(https://www.envox.eu/studio/studio-introduction/)]
+
 Arduino IDE - [(https://www.arduino.cc/en/software)]
+
 Original temp sensing code based on https://turnleftatcairo.weebly.com/code-for-the-arduino.html
+
 Which in turn was based on: [(http://swingleydev.org/blog/tag/arduino/)] (no longer available)
+
 Interface design concept, EEZ LVGL tutorial & inspiration from Uteh Str - [(https://www.youtube.com/watch?v=4k013Crfce8)] - [(https://drive.google.com/file/d/1s4dtXSGeFvR-TereeB9-4iUszsPacVj_/view)]
+
 Help with setup and settings by Rui Santos & Sara Santos-Random Nerd Tutorials [(https://randomnerdtutorials.com/cheap-yellow-display-esp32-2432s028r/)]
+
 Save icon created by Yogi Aprelliyanto - Flaticon [(https://www.flaticon.com/free-icons/save)]
+
 Return icon created by Kiranshastry - Flaticon [(https://www.flaticon.com/free-icons/return)]
+
 Mog image was drawn by me in GIMP. 
 
 
