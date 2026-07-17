@@ -2,16 +2,17 @@
 Multipoint temperature sensor and display designed for Unimog portal monitoring
 Code is designed to work on ESP32 CYD (cheap yellow display) using EEZ Studio and Arduino IDE
 
-**Note** - complete code can be compiled from Mog_Portal_X - There is a flow and simplified (less featured) non-flow version
+**Note** - complete code can be compiled from Mog_Portal
 
-MogDash contains interface designs, for those who wish to modify the look and feel. 
+MogDash contains interface designs created in EEZStudio, for those who wish to modify the look and feel. 
 
-If compiling a new dash, and you get a compile error, please update the following two lines of code noted at the end of this readme. If compiling the FLOW versions, make sure you match the EEZ and Arduino folders.
+If compiling a new dash, and you get a compile error, please update the two lines of code noted at the end of this readme. 
 
 ## What you get
 - Main screen indicates all four portal temperatures, includes brightness slider. 
 - Settings page includes dynamic diff and max temp settings, as well as alarm toggle.
 - Settings for brightness, alarm toggle state, Maximum portal temperature and Max portal temperature difference can be Saved/Loaded to/from VRAM
+- Sensor detect and allocation page. Allows up to 4 onewire sensors to be allocated to each of the 4 temp indicators
 - Temps are read and updated every 4 seconds (can be altered by changing TEMP_READ_INTERVAL)
 - On alarm trigger, on screen warning (colour change) and audible alarm. Resets on cool down. 
 
@@ -33,9 +34,6 @@ If compiling a new dash, and you get a compile error, please update the followin
 - Piezo type speaker - connected to speaker port.
 - JST 1.25 pitch female connectors in 2P and 5P wire.
 - Case Design - Aura Smart Weather Display - [(https://makerworld.com/en/models/1382304-aura-smart-weather-forecast-display#profileId-1430951)]
-
-  **NOTE**: One wire temperature probes need to be identified. Use the OneWire_identifier to obtain these. Add your identifiers in place of my own in the code. 
-  Look for the Temperature Sensors section, and the thermOne ... thermFour
 
 If you update the dash, and you start to receive compile errors, change the following.
 In eez-flow.cpp, change:
